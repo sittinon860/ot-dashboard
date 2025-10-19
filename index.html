@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แดชบอร์ดสถิติการใช้งานเว็บไซต์ OT</title>
+  <style>
+    body {
+      font-family: "Prompt", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #ffdd57;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+  </style>
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2CJVLLCLN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B2CJVLLCLN');
+  </script>
+</head>
+<body>
+  <header>
+    📊 แดชบอร์ดสถิติการใช้งานเว็บไซต์ OT
+  </header>
+
+  <div class="container">
+    <h2>ภาพรวมการใช้งาน</h2>
+    <div class="stats">
+      <div class="card">
+        <h3>จำนวนผู้ใช้ (รายวัน)</h3>
+        <p id="users-today">กำลังโหลด...</p>
+      </div>
+      <div class="card">
+        <h3>จำนวนผู้ใช้ (รายเดือน)</h3>
+        <p id="users-month">กำลังโหลด...</p>
+      </div>
+      <div class="card">
+        <h3>อุปกรณ์ที่ใช้มากที่สุด</h3>
+        <p id="top-device">กำลังโหลด...</p>
+      </div>
+      <div class="card">
+        <h3>ประเทศที่เข้าชมสูงสุด</h3>
+        <p id="top-country">กำลังโหลด...</p>
+      </div>
+    </div>
+
+    <h2>สรุปข้อมูลจาก Google Analytics</h2>
+    <iframe src="https://datastudio.google.com/embed/reporting" title="รายงาน GA4"></iframe>
+  </div>
+
+  <footer>
+    © 2025 โน้ตบันทึกชั่วโมง OT | ออกแบบโดย: <b>สิทธินน</b>
+  </footer>
+</body>
+</html>
